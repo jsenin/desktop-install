@@ -1,0 +1,16 @@
+# requirements
+apt-get install -y ansible
+
+# run
+ansible-playbook -vvv -i hosts -c local -K desktop-install.yml 
+
+or 
+
+./run.sh
+
+
+-i hosts: define los hosts a los que se aplica este playbook
+-c local: conexion local, no requiere ssh
+-K : pregunta la password para poder ejecutar sudo
+
+desktop-install.yml el playbook que orquesta toda la instalacion
