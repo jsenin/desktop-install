@@ -26,6 +26,13 @@
     - sudo
     - ntpdate
 
+- name: Install virtualization Packages
+  sudo: true
+  apt: pkg={{ item }} state=present
+  with_items:
+    - vagrant
+    - virtualbox
+
 
 - name: Configure ntp to spain pool
   sudo: true
