@@ -24,3 +24,15 @@
     - git-core
     - screen
     - sudo
+    - ntpdate
+
+
+- name: Configure ntp to spain pool
+  sudo: true
+  shell: ntpdate es.pool.ntp.org
+
+- name: Configure timezone to madrid/spain
+  sudo: true
+  shell: timedatectl set-timezone Europe/Madrid
+
+
