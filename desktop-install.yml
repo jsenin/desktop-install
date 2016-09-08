@@ -1,0 +1,13 @@
+---
+- name: Deploy my Debian desktop configuration
+  hosts: localhost
+
+  vars: 
+    name: "jorge"
+
+  user: "{{ user }}"
+  sudo: false
+
+  roles:
+    - system
+    - desktop

@@ -1,0 +1,26 @@
+---
+
+- name: Apt-get configure with contrib and nonfree
+  sudo: true
+  copy: src=sources.list dest=/etc/apt/sources.list
+
+
+- name: Apt-get update before installing
+  sudo: true
+  apt: update_cache=yes
+
+
+- name: Install nonfree firmware
+  sudo: true
+  apt: pkg=firmware-linux-nonfree state=present
+
+
+- name: Install Essential Packages
+  sudo: true
+  apt: pkg={{ item }} state=present
+  with_items:
+    - curl 
+    - gnupg2
+    - git-core
+    - screen
+    - sudo
