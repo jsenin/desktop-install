@@ -37,7 +37,7 @@
   sudo: true
   apt: pkg={{ item }} state=present
   with_items:
-    - mtr
+    - mtr-tiny
 
 
 
