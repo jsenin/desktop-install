@@ -33,6 +33,13 @@
     - vagrant
     - virtualbox
 
+- name: Networking tooks 
+  sudo: true
+  apt: pkg={{ item }} state=present
+  with_items:
+    - mtr
+
+
 
 - name: Configure ntp to spain pool
   sudo: true
