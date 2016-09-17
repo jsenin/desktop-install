@@ -1,0 +1,6 @@
+---
+
+- name: Superfast git based search engine 
+  sudo: true
+  apt: pkg=silversearcher-ag state=present
+
