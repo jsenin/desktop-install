@@ -25,6 +25,7 @@
     - screen
     - sudo
     - ntpdate
+    - apg
 
 - name: Install virtualization Packages
   sudo: true
