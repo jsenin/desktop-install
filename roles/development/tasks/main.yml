@@ -4,3 +4,8 @@
   sudo: true
   apt: pkg=silversearcher-ag state=present
 
+- name: diffint tools
+  sudo: true
+  apt: pkg=xxdiff state=present
+
+
