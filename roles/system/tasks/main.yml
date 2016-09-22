@@ -50,4 +50,6 @@
   sudo: true
   shell: timedatectl set-timezone Europe/Madrid
 
+- name: Set vim as default system editor
+  alternatives: name=editor path=/usr/bin/bin.tiny
 
