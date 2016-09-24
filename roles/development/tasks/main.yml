@@ -4,8 +4,10 @@
   sudo: true
   apt: pkg=silversearcher-ag state=present
 
-- name: diffint tools
+- name: diffing tools
   sudo: true
-  apt: pkg=xxdiff state=present
-
+  apt: pkg={{ item }} state=present
+  with_items:
+    - xxdiff 
+    - vbindiff
 
